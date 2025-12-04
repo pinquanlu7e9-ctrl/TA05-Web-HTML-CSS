@@ -1,0 +1,289 @@
+/* Base Styles and Reset */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Header Styling */
+header {
+  background-color: #009688;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+header nav li {
+  margin: 0 15px;
+}
+header nav a {
+  color: #fff;
+  text-decoration: none;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Layout */
+main {
+  display: flex;
+}
+#sidebar {
+  flex: 0 0 250px;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+#sidebar .profile-pic {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+#sidebar p {
+  margin: 0 0 10px;
+}
+
+/* Content area styling */
+#content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Introduction and Skills section */
+#intro-section {
+  display: flex;
+  gap: 20px;
+}
+#about-me {
+  flex: 1;
+}
+#about-me h1 {
+  margin-top: 0;
+}
+#about-me p {
+  margin-bottom: 15px;
+}
+#about-me p:last-child {
+  margin-bottom: 0;
+}
+/* Hidden text initially not displayed */
+.hidden {
+  display: none;
+}
+/* Skills aside styling */
+#skills {
+  flex: 0 0 200px;
+}
+#skills h3 {
+  margin-top: 0;
+}
+#skills ul {
+  list-style: square;
+  padding-left: 20px;
+  margin: 0;
+}
+
+/* Featured Projects and Project List styling */
+#featured-projects, #projects-list {
+  margin-top: 40px;
+}
+#featured-projects h2, #projects-list h1 {
+  margin-top: 0;
+}
+.project-item {
+  margin-bottom: 30px;
+}
+.project-item h3, .project-item h2 {
+  margin: 0 0 10px;
+}
+.project-item p {
+  margin: 0 0 10px;
+}
+
+/* Project Details page layout */
+.project-details-container {
+  display: flex;
+  gap: 20px;
+}
+.project-details-container article {
+  flex: 1;
+}
+.project-details-container article h1 {
+  margin-top: 0;
+}
+.project-details-container article p {
+  margin-bottom: 15px;
+}
+.project-details-container .project-screenshot {
+  max-width: 100%;
+  margin: 10px 0;
+}
+.project-details-container aside {
+  flex: 0 0 200px;
+}
+
+/* Aside common styling */
+aside {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-left: 4px solid #009688;
+  margin-bottom: 20px;
+}
+aside h3 {
+  margin-top: 0;
+}
+aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+aside ul li {
+  margin: 5px 0;
+}
+
+/* Contact page specific styles */
+.contact-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.contact-container aside {
+  flex: 1;
+}
+.contact-container form {
+  flex: 1;
+}
+.form-field {
+  margin-bottom: 15px;
+}
+.form-field label {
+  font-weight: bold;
+}
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font: inherit;
+}
+.form-field textarea {
+  resize: vertical;
+}
+.button {
+  display: inline-block;
+  background-color: #009688;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font: inherit;
+}
+.button:hover {
+  background-color: #00796B;
+}
+#success-message {
+  color: green;
+  font-weight: bold;
+}
+
+/* Back to top button */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #009688;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+#back-to-top:hover {
+  background-color: #00796B;
+}
+#back-to-top.show {
+  display: block;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ddd;
+}
+body.dark-mode header {
+  background-color: #222;
+}
+body.dark-mode #sidebar {
+  background-color: #1e1e1e;
+}
+body.dark-mode aside {
+  background-color: #2a2a2a;
+  border-left-color: #80cbc4;
+}
+body.dark-mode a {
+  color: #80cbc4;
+}
+body.dark-mode header .logo,
+body.dark-mode header nav a {
+  color: #fff;
+}
+body.dark-mode .button {
+  background-color: #80cbc4;
+  color: #000;
+}
+body.dark-mode .button:hover {
+  background-color: #4db6ac;
+}
+body.dark-mode #back-to-top {
+  background-color: #80cbc4;
+  color: #000;
+}
+body.dark-mode #back-to-top:hover {
+  background-color: #4db6ac;
+}
+
+/* Responsive Layout: stack sidebar and content on narrow screens */
+@media (max-width: 600px) {
+  main {
+    flex-direction: column;
+  }
+  #sidebar {
+    width: 100%;
+  }
+  .project-details-container, #intro-section, .contact-container {
+    flex-direction: column;
+  }
+  .contact-container aside {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,11 @@
+main
+├── section#sidebar – Sidebar section (profile info)
+│   ├── img.profile-pic
+│   └── p (profile text)
+└── section#content – Main content area
+    ├── section#intro-section – Introduction section
+    │   ├── article#about-me – Introduction article (about me text)
+    │   └── aside#skills – Aside (list of skills)
+    └── section#featured-projects – Featured projects section
+        ├── article.project-item – Featured Project 1 summary
+        └── article.project-item – Featured Project 2 summary

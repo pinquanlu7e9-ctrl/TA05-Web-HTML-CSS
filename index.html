@@ -1,37 +1,92 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página en GitHub</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            text-align: center;
-            padding: 50px;
-        }
-        .card {
-            background: white;
-            padding: 30px;
-            max-width: 500px;
-            margin: auto;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #555;
-        }
-    </style>
+  <!-- Page metadata and CSS link -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Pin Quan Lu" />
+  <title>Pin Quan Lu - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="card">
-        <h1>¡Hola, mundo!</h1>
-        <p>Esta es mi página sencilla en GitHub Pages.</p>
-    </div>
+  <!-- Header with logo and navigation menu -->
+  <header>
+    <a href="index.html" class="logo">Pin Quan Lu</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#" id="theme-toggle">Dark Mode</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content area with sidebar and primary content -->
+  <main>
+    <!-- Sidebar section with profile information -->
+    <section id="sidebar">
+      <!-- Profile image (replace "profile.jpg" with the actual image path) -->
+      <img src="images/profile.jpg" alt="Pin Quan Lu" class="profile-pic" />
+      <p><strong>Web Development Student</strong></p>
+      <p>Aspiring full-stack developer passionate about creating interactive web experiences.</p>
+    </section>
+
+    <!-- Content section with introduction and featured projects -->
+    <section id="content">
+      <!-- Introduction section with an article and an aside -->
+      <section id="intro-section">
+        <article id="about-me">
+          <h1>Hi, I'm Pin Quan Lu</h1>
+          <p>
+            I'm a web development student enthusiastic about technology and coding.
+            I love building websites and learning new programming skills. 
+          </p>
+          <!-- Additional introduction text initially hidden -->
+          <p id="more-text" class="hidden">
+            I have a background in computer science and enjoy working on projects that solve real-world problems. 
+            In my free time, I experiment with new web technologies and contribute to open-source projects.
+          </p>
+          <!-- Toggle link to expand/collapse additional intro text -->
+          <p><a href="#" id="toggle-more">Read more</a></p>
+        </article>
+        <aside id="skills">
+          <h3>Skills</h3>
+          <ul>
+            <li>HTML5, CSS3</li>
+            <li>JavaScript (ES6)</li>
+            <li>Python, C++</li>
+            <li>SQL & Databases</li>
+          </ul>
+        </aside>
+      </section>
+
+      <!-- Featured projects section -->
+      <section id="featured-projects">
+        <h2>Featured Projects</h2>
+        <article class="project-item">
+          <h3>Project One: Task Manager App</h3>
+          <p>A simple task management web application that allows users to add, edit, and track daily tasks. It features a clean interface and uses browser localStorage to save data.</p>
+          <a href="project1.html" class="button">View Project &raquo;</a>
+        </article>
+        <article class="project-item">
+          <h3>Project Two: Personal Blog Website</h3>
+          <p>A responsive personal blog website template with multiple pages and a dark mode switch. It showcases modern HTML5 semantics and CSS3 styling techniques.</p>
+          <a href="project2.html" class="button">View Project &raquo;</a>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <!-- Footer with email contact -->
+  <footer>
+    <p>&copy; 2025 Pin Quan Lu | <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a></p>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" title="Back to top">↑ Top</button>
+
+  <!-- External JavaScript file -->
+  <script src="script.js"></script>
 </body>
 </html>
-
