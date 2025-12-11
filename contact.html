@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Page metadata and CSS link -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact - Portfolio of Pin Quan Lu" />
+  <title>Contact - Pin Quan Lu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header (same across all pages) -->
+  <header>
+    <a href="index.html" class="logo">Pin Quan Lu</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#" id="theme-toggle">Dark Mode</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <!-- Main content area with sidebar and contact form -->
+  <main>
+    <!-- Reusable sidebar section -->
+    <section id="sidebar">
+      <!-- 这里可以先没有图片，如果你没有 images/profile.jpg，
+           可以删掉这一行 img，或者自己放一张图片进去 -->
+      <img src="images/profile.jpg" alt="Pin Quan Lu" class="profile-pic" />
+      <p><strong>Web Development Student</strong></p>
+      <p>Aspiring full-stack developer passionate about creating interactive web experiences.</p>
+    </section>
+
+    <!-- Contact content section -->
+    <section id="content">
+      <h1>Contact Me</h1>
+      <div class="contact-container">
+        <!-- 左边文字说明 -->
+        <aside>
+          <p>
+            Feel free to reach out by sending me a message through this form.
+            I'm always open to discussing new projects, creative ideas,
+            or opportunities to be part of your visions.
+          </p>
+          <p>
+            You can also email me directly at
+            <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a>.
+          </p>
+        </aside>
+
+        <!-- 右边表单 -->
+        <form id="contact-form">
+          <div class="form-field">
+            <label for="name">Name:</label><br />
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message:</label><br />
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+
+          <button type="submit" class="button">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Success message to display after form submission -->
+      <p id="success-message" class="hidden">
+        <strong>Your message has been sent.</strong>
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer with email contact -->
+  <footer>
+    <p>
+      &copy; 2025 Pin Quan Lu |
+      <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a>
+    </p>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" title="Back to top">↑ Top</button>
+
+  <!-- External JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
