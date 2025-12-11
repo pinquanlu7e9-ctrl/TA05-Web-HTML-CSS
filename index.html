@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Page metadata and CSS link -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Pin Quan Lu" />
-  <title>Pin Quan Lu - Portfolio</title>
+  <meta name="description" content="Portfolio of Pin Quan Lu – ASIXC (Ciberseguretat) student at ITB" />
+  <title>Pin Quan Lu – Portfolio</title>
+  <!-- 路径用根目录的 style.css -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header with logo and navigation menu -->
+  <!-- Header：和其他页面保持一样 -->
   <header>
     <a href="index.html" class="logo">Pin Quan Lu</a>
     <nav>
@@ -22,71 +22,94 @@
     </nav>
   </header>
 
-  <!-- Main content area with sidebar and primary content -->
   <main>
-    <!-- Sidebar section with profile information -->
+    <!-- 左侧栏：ITB + ASIXC 介绍 -->
     <section id="sidebar">
-      <!-- Profile image (replace "profile.jpg" with the actual image path) -->
-      <img src="images/profile.jpg" alt="Pin Quan Lu" class="profile-pic" />
-      <p><strong>Web Development Student</strong></p>
-      <p>Aspiring full-stack developer passionate about creating interactive web experiences.</p>
+      <p><strong>ASIXC – Cybersecurity student</strong></p>
+      <p>
+        I study at <strong>Institut Tecnològic de Barcelona (ITB)</strong> in the
+        <strong>ASIXC (Ciberseguretat)</strong> programme. I use this small
+        website to show a few web projects related to networking and security.
+      </p>
     </section>
 
-    <!-- Content section with introduction and featured projects -->
+    <!-- 右侧主内容 -->
     <section id="content">
-      <!-- Introduction section with an article and an aside -->
+      <!-- 顶部介绍 + 技能 -->
       <section id="intro-section">
         <article id="about-me">
           <h1>Hi, I'm Pin Quan Lu</h1>
           <p>
-            I'm a web development student enthusiastic about technology and coding.
-            I love building websites and learning new programming skills. 
+            I enjoy technology, coding and learning how systems work.
+            In ASIXC we work with networks, operating systems and
+            basic cybersecurity tools. This portfolio is a place to
+            practise HTML, CSS and JavaScript while connecting it to
+            what I study.
           </p>
-          <!-- Additional introduction text initially hidden -->
           <p id="more-text" class="hidden">
-            I have a background in computer science and enjoy working on projects that solve real-world problems. 
-            In my free time, I experiment with new web technologies and contribute to open-source projects.
+            The aim of this project is not to build a complex application,
+            but to show that I can structure a website with semantic HTML,
+            style it with responsive CSS and add useful interactions such
+            as a dark mode switch, form validation and dynamic content.
+            These are the same front-end skills that are useful when
+            creating small dashboards or tools for cybersecurity labs.
           </p>
-          <!-- Toggle link to expand/collapse additional intro text -->
-          <p><a href="#" id="toggle-more">Read more</a></p>
+          <p>
+            <a href="#" id="toggle-more">Read more</a>
+          </p>
         </article>
+
         <aside id="skills">
           <h3>Skills</h3>
           <ul>
-            <li>HTML5, CSS3</li>
+            <li>HTML5 &amp; CSS3</li>
             <li>JavaScript (ES6)</li>
-            <li>Python, C++</li>
-            <li>SQL & Databases</li>
+            <li>Networking basics (TCP/IP)</li>
+            <li>Linux &amp; command line</li>
+            <li>Intro to cybersecurity tools</li>
           </ul>
         </aside>
       </section>
 
-      <!-- Featured projects section -->
+      <!-- 精选项目：跟 project1 / project2 保持同名 -->
       <section id="featured-projects">
         <h2>Featured Projects</h2>
+
         <article class="project-item">
-          <h3>Project One: Task Manager App</h3>
-          <p>A simple task management web application that allows users to add, edit, and track daily tasks. It features a clean interface and uses browser localStorage to save data.</p>
-          <a href="project1.html" class="button">View Project &raquo;</a>
+          <h3>Project 1 – Cyber Lab Task Board</h3>
+          <p>
+            A small front-end prototype that works as a task board for
+            cybersecurity labs: packet capture, firewall rules, password
+            audits and more. It helps to organise activities during
+            practical sessions in ASIXC.
+          </p>
+          <a href="project1.html" class="button">View project »</a>
         </article>
+
         <article class="project-item">
-          <h3>Project Two: Personal Blog Website</h3>
-          <p>A responsive personal blog website template with multiple pages and a dark mode switch. It showcases modern HTML5 semantics and CSS3 styling techniques.</p>
-          <a href="project2.html" class="button">View Project &raquo;</a>
+          <h3>Project 2 – Security Notes Blog</h3>
+          <p>
+            A simple blog-style layout where I can publish study notes
+            about networks, operating systems and basic security topics.
+            It includes a dark mode switch for late-night study sessions.
+          </p>
+          <a href="project2.html" class="button">View project »</a>
         </article>
       </section>
     </section>
   </main>
 
-  <!-- Footer with email contact -->
   <footer>
-    <p>&copy; 2025 Pin Quan Lu | <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a></p>
+    <p>
+      &copy; 2025 Pin Quan Lu ·
+      <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a>
+    </p>
   </footer>
 
-  <!-- Back to top button -->
+  <!-- 回到顶部按钮 -->
   <button id="back-to-top" title="Back to top">↑ Top</button>
 
-  <!-- External JavaScript file -->
+  <!-- JS：保持和别的页面一样的路径 -->
   <script src="script.js"></script>
 </body>
 </html>
