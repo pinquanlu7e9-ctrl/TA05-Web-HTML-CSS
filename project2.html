@@ -1,63 +1,89 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>项目二 - 天气预报应用</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="Project 2 – Security Notes Blog" />
+  <title>Project 2 – Security Notes Blog</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- 页眉，复用导航 -->
+  <!-- Header -->
   <header>
-    <h1 class="logo"><a href="index.html">我的作品集</a></h1>
+    <a href="index.html" class="logo">Pin Quan Lu</a>
     <nav>
       <ul>
-        <li><a href="index.html">首页</a></li>
-        <li><a href="projects.html" class="active">项目</a></li>
-        <li><a href="contact.html">联系</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#" id="theme-toggle">Dark Mode</a></li>
       </ul>
     </nav>
-    <button id="toggle-dark">切换暗色模式</button>
   </header>
 
-  <!-- 项目详情内容 -->
   <main>
-    <article>
-      <h2>项目二：天气预报应用</h2>
-      <p>该项目是一个网页天气预报应用，用户可以输入城市名称来获取该城市的当前天气状况和未来几天的预报。应用使用了一些天气 API（如 OpenWeatherMap）来获取实时的天气数据，并使用 JavaScript 将数据呈现在网页上。</p>
-      <p>在此项目中，我专注于通过 JavaScript 处理 API 调用和响应，解析天气数据并动态更新 DOM 来显示结果。同时，利用 CSS 使得整个应用界面简洁美观，包括不同天气条件下的图标显示等。</p>
-      <figure>
-        <img src="https://via.placeholder.com/600x400?text=Project2+Screenshot" alt="项目二截图示意" />
-        <figcaption>项目二：天气预报应用 页面示意图</figcaption>
-      </figure>
-      <p>从这个项目中，我学会了：</p>
-      <ul>
-        <li>如何使用 Fetch API 来获取数据</li>
-        <li>处理 JSON 格式的 API 响应并提取所需信息</li>
-        <li>根据数据动态更新网页内容，以及基本的错误处理</li>
-      </ul>
-      <p>这个天气应用丰富了我的 JavaScript 实践经验，也让我对前端与 API 的交互有了更深刻的认识。</p>
-    </article>
-    <aside>
-      <h3>项目摘要</h3>
-      <p><strong>开发角色：</strong>前端开发</p>
-      <p><strong>使用技术：</strong>HTML, CSS, JavaScript (Fetch API)</p>
-      <p><strong>完成时间：</strong>2025 年 8 月</p>
-      <p><strong>源码链接：</strong><a href="#" target="_blank">GitHub 仓库</a></p>
-    </aside>
+    <!-- Sidebar -->
+    <section id="sidebar">
+      <p><strong>Blog for ASIXC studies</strong></p>
+      <p>
+        I use this project as a place to write about topics from the
+        ASIXC (Ciberseguretat) modules: networks, systems, and basic security.
+      </p>
+    </section>
+
+    <!-- Content -->
+    <section id="content">
+      <p><a href="projects.html">← Back to all projects</a></p>
+
+      <section class="project-details-container">
+        <article>
+          <h1>Project 2 – Security Notes Blog</h1>
+          <p>
+            This project is a simple multi-page blog layout. The idea is to have
+            a clean place where I can publish short articles about what we learn
+            in class: for example how TCP/IP works, how to harden a Linux server,
+            or first steps with security tools.
+          </p>
+          <p>
+            The blog is built with semantic HTML: each post can be an
+            <code>&lt;article&gt;</code>, grouped inside sections. CSS is used to
+            keep the text readable and to make the layout responsive on smaller screens.
+          </p>
+          <p>
+            A dark mode switch is included using JavaScript and
+            <code>localStorage</code>, which makes the blog more comfortable to read
+            during late-night study sessions.
+          </p>
+
+          <img
+            src="https://via.placeholder.com/900x380?text=Security+Notes+Blog+Screenshot"
+            alt="Screenshot of the Security Notes Blog"
+            class="project-screenshot"
+          />
+        </article>
+
+        <aside>
+          <h3>Project info</h3>
+          <ul>
+            <li><strong>Year:</strong> 2025</li>
+            <li><strong>School:</strong> Institut Tecnològic de Barcelona</li>
+            <li><strong>Track:</strong> ASIXC – Ciberseguretat</li>
+            <li><strong>Technologies:</strong> HTML, CSS, JavaScript</li>
+            <li><strong>Type:</strong> Responsive blog layout</li>
+          </ul>
+        </aside>
+      </section>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 我的作品集</p>
     <p>
-      在社交媒体关注我：
-      <a href="#" target="_blank">GitHub</a> |
-      <a href="#" target="_blank">LinkedIn</a> |
-      <a href="#" target="_blank">微博</a>
+      &copy; 2025 Pin Quan Lu ·
+      <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a>
     </p>
   </footer>
 
-  <button id="back-to-top">▲ 返回顶部</button>
-  <script src="js/script.js"></script>
+  <button id="back-to-top" title="Back to top">↑ Top</button>
+  <script src="script.js"></script>
 </body>
 </html>

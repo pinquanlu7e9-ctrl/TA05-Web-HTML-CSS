@@ -1,66 +1,90 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>项目一 - 在线书店网站</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="Project 1 – Cyber Lab Task Board" />
+  <title>Project 1 – Cyber Lab Task Board</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- 页眉，复用导航 -->
+  <!-- Header -->
   <header>
-    <h1 class="logo"><a href="index.html">我的作品集</a></h1>
+    <a href="index.html" class="logo">Pin Quan Lu</a>
     <nav>
       <ul>
-        <li><a href="index.html">首页</a></li>
-        <li><a href="projects.html" class="active">项目</a></li>
-        <li><a href="contact.html">联系</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#" id="theme-toggle">Dark Mode</a></li>
       </ul>
     </nav>
-    <button id="toggle-dark">切换暗色模式</button>
   </header>
 
-  <!-- 项目详情内容 -->
   <main>
-    <!-- 使用 article 标签表示项目详细信息的主要内容 -->
-    <article>
-      <h2>项目一：在线书店网站</h2>
-      <p>该项目是一个模拟的在线书店网站，提供浏览和购买图书的功能。用户可以浏览书籍列表，查看每本书的详细信息，并将想购买的书籍加入购物车。</p>
-      <p>在这个项目中，我主要负责前端页面的开发和设计。通过使用 HTML 和 CSS 实现了整洁的页面布局，使用 JavaScript 实现了购物车交互、筛选搜索等功能。此外，页面采用了响应式设计，以兼容不同设备的屏幕尺寸。</p>
-      <!-- 示例图片（占位） -->
-      <figure>
-        <img src="https://via.placeholder.com/600x400?text=Project1+Screenshot" alt="项目一截图示意" />
-        <figcaption>项目一：在线书店网站 页面示意图</figcaption>
-      </figure>
-      <p>这个在线书店项目展示了一个典型的电商网站前端结构。我在项目中学习并应用了：</p>
-      <ul>
-        <li>HTML5 语义化标签组织页面结构</li>
-        <li>CSS3 布局和样式（包括 Flexbox 布局和媒体查询）</li>
-        <li>JavaScript 实现交互效果（如购物车动态更新）</li>
-      </ul>
-      <p>通过该项目，我对 Web 应用的前端开发有了更深入的理解，也锻炼了独立开发和调试的能力。</p>
-    </article>
-    <!-- 使用 aside 标签提供项目的附加信息，如技术栈或角色 -->
-    <aside>
-      <h3>项目摘要</h3>
-      <p><strong>开发角色：</strong>前端开发</p>
-      <p><strong>使用技术：</strong>HTML, CSS, JavaScript</p>
-      <p><strong>完成时间：</strong>2025 年 5 月</p>
-      <p><strong>源码链接：</strong><a href="#" target="_blank">GitHub 仓库</a></p>
-    </aside>
+    <!-- Sidebar -->
+    <section id="sidebar">
+      <p><strong>ASIXC – Cybersecurity student</strong></p>
+      <p>
+        This project is inspired by the practical labs we do at
+        Institut Tecnològic de Barcelona in ASIXC (Ciberseguretat):
+        networking, Linux, security tools, etc.
+      </p>
+    </section>
+
+    <!-- Content -->
+    <section id="content">
+      <p><a href="projects.html">← Back to all projects</a></p>
+
+      <section class="project-details-container">
+        <article>
+          <h1>Project 1 – Cyber Lab Task Board</h1>
+          <p>
+            This project is a small web application that works as a “task board”
+            for cybersecurity labs. Each card on the board represents a lab task:
+            for example capturing packets with Wireshark, configuring firewall
+            rules, or scanning a network segment.
+          </p>
+          <p>
+            The goal is not to implement a complex backend, but to practise
+            <strong>HTML structure</strong>, <strong>CSS layout</strong> and
+            <strong>basic JavaScript interactions</strong>. Tasks can be marked
+            as “To do”, “In progress” or “Done” by moving them between columns.
+          </p>
+          <p>
+            This is useful during ASIXC practical sessions, because it helps
+            to keep track of which activities are finished and which still need work.
+          </p>
+
+          <img
+            src="https://via.placeholder.com/900x380?text=Cyber+Lab+Task+Board+Screenshot"
+            alt="Screenshot of the Cyber Lab Task Board"
+            class="project-screenshot"
+          />
+        </article>
+
+        <aside>
+          <h3>Project info</h3>
+          <ul>
+            <li><strong>Year:</strong> 2025</li>
+            <li><strong>School:</strong> Institut Tecnològic de Barcelona</li>
+            <li><strong>Track:</strong> ASIXC – Ciberseguretat</li>
+            <li><strong>Technologies:</strong> HTML, CSS, JavaScript</li>
+            <li><strong>Type:</strong> Front-end prototype</li>
+          </ul>
+        </aside>
+      </section>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 我的作品集</p>
     <p>
-      在社交媒体关注我：
-      <a href="#" target="_blank">GitHub</a> |
-      <a href="#" target="_blank">LinkedIn</a> |
-      <a href="#" target="_blank">微博</a>
+      &copy; 2025 Pin Quan Lu ·
+      <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a>
     </p>
   </footer>
 
-  <button id="back-to-top">▲ 返回顶部</button>
-  <script src="js/script.js"></script>
+  <button id="back-to-top" title="Back to top">↑ Top</button>
+  <script src="script.js"></script>
 </body>
 </html>

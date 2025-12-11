@@ -1,50 +1,98 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>个人作品集 - 所有项目</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="All projects by Pin Quan Lu" />
+  <title>Projects – Pin Quan Lu</title>
+  <!-- 注意：这里用的是 style.css，不是 css/style.css -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- 页眉，复用主站的导航 -->
+  <!-- Header (same on every page) -->
   <header>
-    <h1 class="logo"><a href="index.html">我的作品集</a></h1>
+    <a href="index.html" class="logo">Pin Quan Lu</a>
     <nav>
       <ul>
-        <li><a href="index.html">首页</a></li>
-        <li><a href="projects.html" class="active">项目</a></li>
-        <li><a href="contact.html">联系</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#" id="theme-toggle">Dark Mode</a></li>
       </ul>
     </nav>
-    <button id="toggle-dark">切换暗色模式</button>
   </header>
 
   <main>
-    <section>
-      <h2>所有项目</h2>
-      <p>以下是我的项目列表。其中前两个项目提供了详细介绍页面：</p>
-      <!-- 列出项目列表，前两个项目包含链接 -->
-      <ul class="projects-list">
-        <li><a href="project1.html">项目一：在线书店网站</a> - 电商类网页应用</li>
-        <li><a href="project2.html">项目二：天气预报应用</a> - 信息查询类网页应用</li>
-        <li>项目三：博客平台构想 - 博客网站 (详细信息敬请期待)</li>
-        <li>项目四：聊天室应用 - 实时通信 (详细信息敬请期待)</li>
-      </ul>
+    <!-- Sidebar (same layout as home) -->
+    <section id="sidebar">
+      <p><strong>ASIXC student – Cybersecurity</strong></p>
+      <p>
+        I study at Institut Tecnològic de Barcelona (ITB), in the ASIXC (Ciberseguretat)
+        programme. Most of my projects are related to networking and security.
+      </p>
+    </section>
+
+    <!-- Main content -->
+    <section id="content">
+      <h1>All Projects</h1>
+      <p>
+        This page lists some of the exercises and small projects I have built during
+        my studies at <strong>Institut Tecnològic de Barcelona</strong> in the
+        <strong>ASIXC (Ciberseguretat)</strong> track.
+      </p>
+
+      <section id="projects-list">
+        <!-- Project 1 -->
+        <article class="project-item">
+          <h2>Project 1 – Cyber Lab Task Board</h2>
+          <p>
+            A simple web task board to organise cybersecurity lab exercises:
+            packet capture, firewall rules, password audits, etc.
+          </p>
+          <a href="project1.html" class="button">View details »</a>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-item">
+          <h2>Project 2 – Security Notes Blog</h2>
+          <p>
+            A personal blog-style website to publish study notes about
+            networking, operating systems, and basic security concepts.
+          </p>
+          <a href="project2.html" class="button">View details »</a>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-item">
+          <h2>Project 3 – Network Map (concept)</h2>
+          <p>
+            Concept for a web page that visually shows a small ITB lab network:
+            routers, switches, servers and clients, with a short description of each.
+            (This version does not have a detail page yet.)
+          </p>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-item">
+          <h2>Project 4 – Log Monitoring Dashboard (concept)</h2>
+          <p>
+            Concept for a dashboard layout to display system logs and alerts,
+            useful when learning about intrusion detection and log analysis.
+            (This version also has no separate detail page yet.)
+          </p>
+        </article>
+      </section>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 我的作品集</p>
     <p>
-      在社交媒体关注我：
-      <a href="#" target="_blank">GitHub</a> |
-      <a href="#" target="_blank">LinkedIn</a> |
-      <a href="#" target="_blank">微博</a>
+      &copy; 2025 Pin Quan Lu ·
+      <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a>
     </p>
   </footer>
 
-  <button id="back-to-top">▲ 返回顶部</button>
-  <script src="js/script.js"></script>
+  <button id="back-to-top" title="Back to top">↑ Top</button>
+  <script src="script.js"></script>
 </body>
 </html>
