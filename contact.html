@@ -10,17 +10,25 @@
 </head>
 <body>
   <!-- Header (same across all pages) -->
-  <header>
-    <a href="index.html" class="logo">Pin Quan Lu</a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="#" id="theme-toggle">Dark Mode</a></li>
-      </ul>
-    </nav>
-  </header>
+  <header class="topbar">
+  <a href="index.html" class="logo" aria-label="Pin Quan Lu home">
+    <span class="logo__icon" data-tilt data-tilt-depth="1.4">PQL</span>
+    <span class="logo__text">
+      <span class="logo__name">Pin Quan Lu</span>
+      <span class="logo__tag">Cyber Portfolio</span>
+    </span>
+  </a>
+
+  <nav class="topnav" aria-label="Primary navigation">
+    <a class="nav-link" href="index.html">Portada</a>
+    <a class="nav-link" href="project1.html">Project 1</a>
+    <a class="nav-link" href="project2.html">Project 2</a>
+    <a class="nav-link is-active" href="contact.html">Contact</a>
+  </nav>
+
+  <button id="theme-toggle" class="btn ghost" type="button">Dark mode</button>
+</header>
+
 
   <!-- Main content area with sidebar and contact form -->
   <main>
