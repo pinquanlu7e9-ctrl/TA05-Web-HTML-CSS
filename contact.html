@@ -1,103 +1,127 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <!-- Page metadata and CSS link -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Contact - Portfolio of Pin Quan Lu" />
-  <title>Contact - Pin Quan Lu</title>
+  <title>Contact · Pin Quan Lu</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- Header (same across all pages) -->
   <header class="topbar">
-  <a href="index.html" class="logo" aria-label="Pin Quan Lu home">
-    <span class="logo__icon" data-tilt data-tilt-depth="1.4">PQL</span>
-    <span class="logo__text">
-      <span class="logo__name">Pin Quan Lu</span>
-      <span class="logo__tag">Cyber Portfolio</span>
-    </span>
-  </a>
+    <a href="index.html" class="logo" aria-label="Pin Quan Lu home">
+      <span class="logo__icon" data-tilt data-tilt-depth="1.4">PQL</span>
+      <span class="logo__text">
+        <span class="logo__name">Pin Quan Lu</span>
+        <span class="logo__tag">Cyber Portfolio</span>
+      </span>
+    </a>
 
-  <nav class="topnav" aria-label="Primary navigation">
-    <a class="nav-link" href="index.html">Portada</a>
-    <a class="nav-link" href="project1.html">Project 1</a>
-    <a class="nav-link" href="project2.html">Project 2</a>
-    <a class="nav-link is-active" href="contact.html">Contact</a>
-  </nav>
+    <nav class="topnav" aria-label="Primary navigation">
+      <a class="nav-link" href="index.html">Portada</a>
+      <a class="nav-link" href="project1.html">Project&nbsp;1</a>
+      <a class="nav-link" href="project2.html">Project&nbsp;2</a>
+      <a class="nav-link is-active" href="contact.html" aria-current="page">Contact</a>
+    </nav>
 
-  <button id="theme-toggle" class="btn ghost" type="button">Dark mode</button>
-</header>
+    <button id="theme-toggle" class="btn ghost" type="button">Dark mode</button>
+  </header>
 
+  <main class="layout">
+    <!-- Sidebar -->
+    <section id="sidebar" class="sidebar reveal" data-tilt data-tilt-depth="0.7">
+      <header class="sidebar__header">
+        <p class="chip">Get in touch</p>
+        <h1>Contact</h1>
+      </header>
 
-  <!-- Main content area with sidebar and contact form -->
-  <main>
-    <!-- Reusable sidebar section -->
-    <section id="sidebar">
-      <!-- 这里可以先没有图片，如果你没有 images/profile.jpg，
-           可以删掉这一行 img，或者自己放一张图片进去 -->
-
-      <p><strong>Web Development Student</strong></p>
-      <p>Aspiring full-stack developer passionate about creating interactive web experiences.</p>
-    </section>
-
-    <!-- Contact content section -->
-    <section id="content">
-      <h1>Contact Me</h1>
-      <div class="contact-container">
-        <!-- 左边文字说明 -->
-        <aside>
-          <p>
-            Feel free to reach out by sending me a message through this form.
-            I'm always open to discussing new projects, creative ideas,
-            or opportunities to be part of your visions.
-          </p>
-          <p>
-            You can also email me directly at
-            <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a>.
-          </p>
-        </aside>
-
-        <!-- 右边表单 -->
-        <form id="contact-form">
-          <div class="form-field">
-            <label for="name">Name:</label><br />
-            <input type="text" id="name" name="name" required />
-          </div>
-
-          <div class="form-field">
-            <label for="email">Email:</label><br />
-            <input type="email" id="email" name="email" required />
-          </div>
-
-          <div class="form-field">
-            <label for="message">Message:</label><br />
-            <textarea id="message" name="message" rows="4" required></textarea>
-          </div>
-
-          <button type="submit" class="button">Send Message</button>
-        </form>
+      <div class="brandmark" aria-hidden="true">
+        <span class="logo__icon">PQL</span>
+        <div class="logo__text">
+          <div class="logo__name">Pin Quan Lu</div>
+          <div class="logo__tag">Cyber Portfolio</div>
+        </div>
       </div>
 
-      <!-- Success message to display after form submission -->
-      <p id="success-message" class="hidden">
-        <strong>Your message has been sent.</strong>
+      <p class="sidebar__text">
+        Web Development student focused on interactive UI and clean structure.
+        I’m open to collaborations, feedback, and project opportunities.
       </p>
+
+      <aside class="sidebar__meta">
+        <h2>Profile</h2>
+        <ul>
+          <li><strong>Location:</strong> Barcelona</li>
+          <li><strong>Focus:</strong> Web · Security</li>
+          <li><strong>Email:</strong> <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a></li>
+        </ul>
+      </aside>
+
+      <footer class="sidebar__footer">
+        <p>Tip: try Dark/Light toggle <span class="spark">✦</span></p>
+      </footer>
+    </section>
+
+    <!-- Content -->
+    <section id="content" class="content">
+      <section class="panel reveal" data-section>
+        <header class="panel__header">
+          <p class="eyebrow">Contact</p>
+          <h2>Contact Me</h2>
+          <p class="panel__lead">
+            Send me a message using the form. (Demo validation + success message.)
+          </p>
+        </header>
+
+        <div class="contact-container">
+          <aside>
+            <p>
+              Feel free to reach out by sending me a message through this form.
+              I’m always open to discussing new projects, creative ideas,
+              or opportunities to be part of your visions.
+            </p>
+            <p>
+              You can also email me directly at
+              <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a>.
+            </p>
+          </aside>
+
+          <form id="contact-form" aria-label="Contact form">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your name" />
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="name@example.com" />
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Write your message..."></textarea>
+            </div>
+
+            <button type="submit" class="btn primary">Send message</button>
+          </form>
+        </div>
+
+        <p id="success-message" class="hidden"><strong>Your message has been sent.</strong></p>
+      </section>
+
+      <footer class="content-footer reveal" data-section>
+        <a class="btn ghost" href="index.html">&larr; Back to Portada</a>
+        <a class="btn primary" href="project1.html">Open Project 1</a>
+      </footer>
     </section>
   </main>
 
-  <!-- Footer with email contact -->
-  <footer>
-    <p>
-      &copy; 2025 Pin Quan Lu |
-      <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a>
-    </p>
+  <footer class="page-footer">
+    <p>© 2025 Pin Quan Lu · <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a></p>
   </footer>
 
-  <!-- Back to top button -->
-  <button id="back-to-top" title="Back to top">↑ Top</button>
-
-  <!-- External JavaScript file -->
+  <button id="back-to-top" class="backtop" title="Back to top">↑</button>
   <script src="script.js"></script>
 </body>
 </html>
