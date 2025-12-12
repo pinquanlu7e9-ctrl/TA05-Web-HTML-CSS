@@ -1,61 +1,53 @@
-# TA05 – Web HTML/CSS/JS – Portfolio
+# TA05 – Web HTML/CSS/JS – Cyber Portfolio
 
-This repository contains the portfolio website for **Pin Quan Lu**,
-created for the TA05 assignment of the _Llenguatge de Marques / HTML-CSS-JS_ module.
+Static futuristic portfolio website for **Pin Quan Lu** (TA05 assignment).
 
-The site is a small static portfolio built with semantic HTML, external CSS and vanilla JavaScript.
+Deployed with **GitHub Pages**:
+https://pinquanlu7e9-ctrl.github.io/TA05-Web-HTML-CSS/
 
 ---
 
 ## Pages
 
-- `index.html` – **Portada / Home**  
-  Intro, sidebar with profile info, and two featured projects with links to their detail pages.
-
-- `project1.html` – **Project 1 – Task Manager App**  
-  Project detail page with description, screenshot placeholder and info aside.
-
-- `project2.html` – **Project 2 – Personal Blog Website**  
-  Project detail page with description, screenshot placeholder and info aside.
-
-- `projects.html` – **Projects list**  
-  List of at least four projects. The first two link to the corresponding detail pages.
-
-- `contact.html` – **Contact page**  
-  Contact form with validation (name, email, message) and a text area explaining how to get in touch.
+- `index.html` – **Portada / Home**
+- `project1.html` – **Project 1 · Online Bookstore**
+- `project2.html` – **Project 2 · Weather Forecast UI**
+- `projects.html` – **All projects list (4+)**
+- `contact.html` – **Contact form**
 
 ---
 
-## Technologies
+## Features (Vanilla JS)
 
-- HTML5 (semantic structure: `header`, `nav`, `section`, `article`, `aside`, `footer`)
-- CSS3 (layout, colours, responsive behaviour)
-- JavaScript (ES6):
-
-  - Dark / light theme toggle (saved in `localStorage`)
-  - “Back to top” button
-  - Contact form validation
-  - “Read more / Read less” toggle on the home page
+- Dark / Light mode toggle (saved in `localStorage`)
+- Back-to-top button
+- Contact form validation (name / email / message)
+- Mouse tilt effect (`[data-tilt]`)
+- Scroll-reveal animations (`IntersectionObserver`)
+- Drag-to-scroll rail (on home page)
 
 ---
 
-## How to run locally
+## Folder structure
 
-1. Clone or download this repository.
-2. Open the folder in a browser (for example by using **Live Server** in VS Code).
-3. Open `index.html` as the entry point.
-
----
-
-## GitHub Pages
-
-The site is deployed using **GitHub Pages**:
-
-👉 `https://pinquanlu7e9-ctrl.github.io/TA05-Web-HTML-CSS/`
+- `style.css` – main styles (both themes)
+- `script.js` – all interactions
+- `images/`
+  - `logo.png`
+  - `project1-preview.png`
+  - `project2-preview.png`
 
 ---
 
-## Author
+## Run locally
 
-**Pin Quan Lu**  
-Email: `pinquan.lu.7e9@itb.cat`
+1. Download / clone this repo
+2. Open the folder in VS Code
+3. Run with **Live Server** (recommended) or open `index.html` directly
+
+---
+
+## Notes
+
+This site uses semantic HTML (`header`, `nav`, `section`, `article`, `aside`, `footer`)
+and is fully static (HTML + CSS + JS).

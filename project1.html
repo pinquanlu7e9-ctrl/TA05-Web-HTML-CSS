@@ -20,7 +20,7 @@
 
   <nav class="topnav" aria-label="Primary navigation">
     <a class="nav-link" href="index.html">Portada</a>
-    <a class="nav-link is-active" href="project1.html">Project&nbsp;1</a>
+    <a class="nav-link is-active" href="project1.html" aria-current="page">Project&nbsp;1</a>
     <a class="nav-link" href="project2.html">Project&nbsp;2</a>
     <a class="nav-link" href="contact.html">Contact</a>
   </nav>
@@ -48,6 +48,10 @@
         <li><strong>Category:</strong> Web Interface</li>
       </ul>
     </aside>
+
+    <footer class="sidebar__footer">
+      <p>Tip: Toggle theme <span class="spark">●</span> and try hover/tilt.</p>
+    </footer>
   </section>
 
   <section id="content" class="content">
@@ -56,9 +60,8 @@
       <header class="panel__header">
         <h2>About This Project</h2>
         <p class="panel__lead">
-          This project demonstrates a bookstore layout
-          supporting hover effects, responsiveness, 
-          and a simulated shopping cart using JavaScript.
+          This project demonstrates a bookstore layout supporting hover effects,
+          responsiveness, and a simulated shopping cart using JavaScript.
         </p>
       </header>
 
@@ -80,16 +83,91 @@
       </div>
     </section>
 
-    <!-- Screenshot demo section -->
+    <!-- UI Preview (no external image needed) -->
     <section class="panel reveal" data-section>
-      <h2 class="panel__header">Screenshot Preview</h2>
-      <img
-        src="https://via.placeholder.com/960x400?text=Project+1+Screenshot"
-        alt="Online Bookstore Screenshot"
-        class="project-screenshot"
-      />
+      <header class="panel__header">
+        <h2>UI Preview</h2>
+        <p class="panel__lead">
+          A stylized preview illustration (SVG) — works everywhere without extra files.
+        </p>
+      </header>
+
+      <figure class="project-preview reveal" data-tilt data-tilt-depth="0.7" aria-label="Online Bookstore UI preview illustration">
+        <svg viewBox="0 0 960 420" role="img" aria-label="Online Bookstore UI preview">
+          <defs>
+            <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#0ea5e9" stop-opacity="0.22"/>
+              <stop offset="0.55" stop-color="#6366f1" stop-opacity="0.16"/>
+              <stop offset="1" stop-color="#020617" stop-opacity="0.10"/>
+            </linearGradient>
+            <linearGradient id="card1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#0b1221" stop-opacity="0.95"/>
+              <stop offset="1" stop-color="#111c34" stop-opacity="0.95"/>
+            </linearGradient>
+            <linearGradient id="btn1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#22d3ee"/>
+              <stop offset="1" stop-color="#6366f1"/>
+            </linearGradient>
+            <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#020617" flood-opacity="0.35"/>
+            </filter>
+          </defs>
+
+          <!-- background -->
+          <rect x="0" y="0" width="960" height="420" rx="24" fill="url(#bg1)"/>
+          <rect x="18" y="18" width="924" height="384" rx="20" fill="rgba(255,255,255,0.06)" stroke="rgba(148,163,184,0.35)"/>
+
+          <!-- top bar -->
+          <rect x="44" y="42" width="872" height="52" rx="16" fill="url(#card1)" filter="url(#softShadow)" stroke="rgba(148,163,184,0.35)"/>
+          <rect x="64" y="56" width="30" height="30" rx="10" fill="url(#btn1)"/>
+          <text x="104" y="77" font-size="16" font-weight="800" fill="#eef6ff" font-family="system-ui,Segoe UI">PQL Bookstore</text>
+
+          <!-- search -->
+          <rect x="340" y="58" width="360" height="26" rx="13" fill="rgba(255,255,255,0.08)" stroke="rgba(148,163,184,0.25)"/>
+          <text x="360" y="76" font-size="12" fill="rgba(231,243,255,0.75)" font-family="system-ui,Segoe UI">Search books, authors…</text>
+
+          <!-- cart badge -->
+          <rect x="820" y="58" width="78" height="26" rx="13" fill="rgba(34,211,238,0.14)" stroke="rgba(34,211,238,0.5)"/>
+          <text x="842" y="76" font-size="12" font-weight="700" fill="#eef6ff" font-family="system-ui,Segoe UI">Cart · 2</text>
+
+          <!-- content grid -->
+          <text x="64" y="132" font-size="14" font-weight="800" fill="#eef6ff" font-family="system-ui,Segoe UI">Featured books</text>
+
+          <!-- product cards -->
+          <g filter="url(#softShadow)">
+            <!-- card 1 -->
+            <rect x="64" y="150" width="260" height="220" rx="18" fill="url(#card1)" stroke="rgba(148,163,184,0.35)"/>
+            <rect x="84" y="170" width="90" height="120" rx="12" fill="rgba(255,255,255,0.10)" stroke="rgba(148,163,184,0.22)"/>
+            <text x="188" y="198" font-size="14" font-weight="800" fill="#eef6ff" font-family="system-ui,Segoe UI">Neon Networks</text>
+            <text x="188" y="220" font-size="12" fill="rgba(231,243,255,0.75)" font-family="system-ui,Segoe UI">Security · 2025</text>
+            <text x="188" y="255" font-size="12" fill="rgba(231,243,255,0.75)" font-family="system-ui,Segoe UI">€ 19.90</text>
+            <rect x="188" y="280" width="110" height="30" rx="15" fill="url(#btn1)"/>
+            <text x="206" y="301" font-size="12" font-weight="900" fill="#06101f" font-family="system-ui,Segoe UI">Add to cart</text>
+
+            <!-- card 2 -->
+            <rect x="350" y="150" width="260" height="220" rx="18" fill="url(#card1)" stroke="rgba(148,163,184,0.35)"/>
+            <rect x="370" y="170" width="90" height="120" rx="12" fill="rgba(255,255,255,0.10)" stroke="rgba(148,163,184,0.22)"/>
+            <text x="474" y="198" font-size="14" font-weight="800" fill="#eef6ff" font-family="system-ui,Segoe UI">HTML Deep Dive</text>
+            <text x="474" y="220" font-size="12" fill="rgba(231,243,255,0.75)" font-family="system-ui,Segoe UI">Web · UI</text>
+            <text x="474" y="255" font-size="12" fill="rgba(231,243,255,0.75)" font-family="system-ui,Segoe UI">€ 24.00</text>
+            <rect x="474" y="280" width="110" height="30" rx="15" fill="url(#btn1)"/>
+            <text x="492" y="301" font-size="12" font-weight="900" fill="#06101f" font-family="system-ui,Segoe UI">Add to cart</text>
+
+            <!-- card 3 -->
+            <rect x="636" y="150" width="280" height="220" rx="18" fill="url(#card1)" stroke="rgba(148,163,184,0.35)"/>
+            <text x="656" y="190" font-size="14" font-weight="800" fill="#eef6ff" font-family="system-ui,Segoe UI">Order summary</text>
+            <rect x="656" y="206" width="240" height="1" fill="rgba(148,163,184,0.25)"/>
+            <text x="656" y="236" font-size="12" fill="rgba(231,243,255,0.75)" font-family="system-ui,Segoe UI">2 items</text>
+            <text x="656" y="262" font-size="12" fill="rgba(231,243,255,0.75)" font-family="system-ui,Segoe UI">Subtotal</text>
+            <text x="832" y="262" font-size="12" font-weight="800" fill="#eef6ff" text-anchor="end" font-family="system-ui,Segoe UI">€ 43.90</text>
+            <rect x="656" y="292" width="240" height="34" rx="17" fill="url(#btn1)"/>
+            <text x="776" y="314" font-size="12" font-weight="900" fill="#06101f" text-anchor="middle" font-family="system-ui,Segoe UI">Checkout</text>
+          </g>
+        </svg>
+      </figure>
+
       <p class="panel__lead muted">
-        Replace this placeholder with your real screenshot.
+        Later you can replace this SVG with a real screenshot — but you don’t need to for the assignment.
       </p>
     </section>
 
