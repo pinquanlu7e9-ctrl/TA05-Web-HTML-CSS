@@ -1,90 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Project 1 – Cyber Lab Task Board" />
-  <title>Project 1 – Cyber Lab Task Board</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Project 1 - Online Bookstore by Pin Quan Lu." />
+  <title>Project 1 · Online Bookstore</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <a href="index.html" class="logo">Pin Quan Lu</a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="#" id="theme-toggle">Dark Mode</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <!-- Sidebar -->
-    <section id="sidebar">
-      <p><strong>ASIXC – Cybersecurity student</strong></p>
-      <p>
-        This project is inspired by the practical labs we do at
-        Institut Tecnològic de Barcelona in ASIXC (Ciberseguretat):
-        networking, Linux, security tools, etc.
+<header class="topbar">
+  <a href="index.html" class="logo" aria-label="Pin Quan Lu home">
+    <span class="logo__icon" data-tilt data-tilt-depth="1.4">PQL</span>
+    <span class="logo__text">
+      <span class="logo__name">Pin Quan Lu</span>
+      <span class="logo__tag">Cyber Portfolio</span>
+    </span>
+  </a>
+
+  <nav class="topnav" aria-label="Primary navigation">
+    <a class="nav-link" href="index.html">Portada</a>
+    <a class="nav-link is-active" href="project1.html">Project&nbsp;1</a>
+    <a class="nav-link" href="project2.html">Project&nbsp;2</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+  </nav>
+
+  <button id="theme-toggle" class="btn ghost" type="button">Dark mode</button>
+</header>
+
+<main class="layout">
+  <section id="sidebar" class="sidebar reveal" data-tilt data-tilt-depth="0.8">
+    <header class="sidebar__header">
+      <p class="chip">Project 1</p>
+      <h1>Online Bookstore</h1>
+    </header>
+
+    <aside>
+      <p class="sidebar__text">
+        A responsive web UI simulating an online bookstore.
+        Built to demonstrate semantic layout, interactive cards,
+        and a local cart demo.
+      </p>
+
+      <ul class="sidebar__meta">
+        <li><strong>Year:</strong> 2025</li>
+        <li><strong>Technologies:</strong> HTML, CSS, JavaScript</li>
+        <li><strong>Category:</strong> Web Interface</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section id="content" class="content">
+    <!-- Project intro -->
+    <section class="panel reveal" data-section>
+      <header class="panel__header">
+        <h2>About This Project</h2>
+        <p class="panel__lead">
+          This project demonstrates a bookstore layout
+          supporting hover effects, responsiveness, 
+          and a simulated shopping cart using JavaScript.
+        </p>
+      </header>
+
+      <div class="featured-grid">
+        <article class="project-card" data-tilt data-tilt-depth="1.1">
+          <h3>Responsive Grid</h3>
+          <p>Adapts card layout from desktop to mobile smoothly.</p>
+        </article>
+
+        <article class="project-card" data-tilt data-tilt-depth="1.1">
+          <h3>Interactive Cards</h3>
+          <p>Mouse hover highlights items and feedback on click.</p>
+        </article>
+
+        <article class="project-card" data-tilt data-tilt-depth="1.1">
+          <h3>Cart Simulation</h3>
+          <p>A simple cart demo using localStorage for saved items.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Screenshot demo section -->
+    <section class="panel reveal" data-section>
+      <h2 class="panel__header">Screenshot Preview</h2>
+      <img
+        src="https://via.placeholder.com/960x400?text=Project+1+Screenshot"
+        alt="Online Bookstore Screenshot"
+        class="project-screenshot"
+      />
+      <p class="panel__lead muted">
+        Replace this placeholder with your real screenshot.
       </p>
     </section>
 
-    <!-- Content -->
-    <section id="content">
-      <p><a href="projects.html">← Back to all projects</a></p>
+    <footer class="content-footer reveal" data-section>
+      <a class="btn ghost" href="projects.html">&larr; Back to list</a>
+      <a class="btn primary" href="contact.html">Contact me</a>
+    </footer>
+  </section>
+</main>
 
-      <section class="project-details-container">
-        <article>
-          <h1>Project 1 – Cyber Lab Task Board</h1>
-          <p>
-            This project is a small web application that works as a “task board”
-            for cybersecurity labs. Each card on the board represents a lab task:
-            for example capturing packets with Wireshark, configuring firewall
-            rules, or scanning a network segment.
-          </p>
-          <p>
-            The goal is not to implement a complex backend, but to practise
-            <strong>HTML structure</strong>, <strong>CSS layout</strong> and
-            <strong>basic JavaScript interactions</strong>. Tasks can be marked
-            as “To do”, “In progress” or “Done” by moving them between columns.
-          </p>
-          <p>
-            This is useful during ASIXC practical sessions, because it helps
-            to keep track of which activities are finished and which still need work.
-          </p>
+<footer class="page-footer">
+  <p>© 2025 Pin Quan Lu · <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a></p>
+</footer>
 
-          <img
-            src="https://via.placeholder.com/900x380?text=Cyber+Lab+Task+Board+Screenshot"
-            alt="Screenshot of the Cyber Lab Task Board"
-            class="project-screenshot"
-          />
-        </article>
-
-        <aside>
-          <h3>Project info</h3>
-          <ul>
-            <li><strong>Year:</strong> 2025</li>
-            <li><strong>School:</strong> Institut Tecnològic de Barcelona</li>
-            <li><strong>Track:</strong> ASIXC – Ciberseguretat</li>
-            <li><strong>Technologies:</strong> HTML, CSS, JavaScript</li>
-            <li><strong>Type:</strong> Front-end prototype</li>
-          </ul>
-        </aside>
-      </section>
-    </section>
-  </main>
-
-  <footer>
-    <p>
-      &copy; 2025 Pin Quan Lu ·
-      <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a>
-    </p>
-  </footer>
-
-  <button id="back-to-top" title="Back to top">↑ Top</button>
-  <script src="script.js"></script>
+<button id="back-to-top" class="backtop" title="Back to top">↑</button>
+<script src="script.js"></script>
 </body>
 </html>

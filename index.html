@@ -1,115 +1,196 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Pin Quan Lu – ASIXC (Ciberseguretat) student at ITB" />
-  <title>Pin Quan Lu – Portfolio</title>
-  <!-- 路径用根目录的 style.css -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Futuristic portfolio of Pin Quan Lu" />
+  <title>Portada · Pin Quan Lu</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- Header：和其他页面保持一样 -->
-  <header>
-    <a href="index.html" class="logo">Pin Quan Lu</a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="#" id="theme-toggle">Dark Mode</a></li>
-      </ul>
+  <!-- 顶部导航 + 科幻 logo -->
+  <header class="topbar">
+    <a href="index.html" class="logo" aria-label="Pin Quan Lu home">
+      <span class="logo__icon" data-tilt data-tilt-depth="1.4">PQL</span>
+      <span class="logo__text">
+        <span class="logo__name">Pin Quan Lu</span>
+        <span class="logo__tag">Cyber Portfolio</span>
+      </span>
+    </a>
+
+    <nav class="topnav" aria-label="Primary navigation">
+      <a class="nav-link is-active" href="index.html" aria-current="page">Portada</a>
+      <a class="nav-link" href="project1.html">Project&nbsp;1</a>
+      <a class="nav-link" href="project2.html">Project&nbsp;2</a>
+      <a class="nav-link" href="contact.html">Contact</a>
     </nav>
+
+    <button id="theme-toggle" class="btn ghost" type="button">
+      Dark mode
+    </button>
   </header>
 
-  <main>
-    <!-- 左侧栏：ITB + ASIXC 介绍 -->
-    <section id="sidebar">
-      <p><strong>ASIXC – Cybersecurity student</strong></p>
-      <p>
-        I study at <strong>Institut Tecnològic de Barcelona (ITB)</strong> in the
-        <strong>ASIXC (Ciberseguretat)</strong> programme. I use this small
-        website to show a few web projects related to networking and security.
+  <!-- 主体：左侧资料 / 右侧内容 -->
+  <main class="layout">
+    <!-- 左侧：个人信息（满足作业的 section / aside 要求） -->
+    <section id="sidebar" class="sidebar reveal" data-tilt data-tilt-depth="0.6">
+      <header class="sidebar__header">
+        <p class="chip">ASIXC · Cybersecurity student</p>
+        <h1>Pin Quan Lu</h1>
+      </header>
+
+      <p class="sidebar__text">
+        Passionate about web development and cyber-security.  
+        I enjoy building futuristic interfaces and experimenting
+        with front-end effects like drag interactions and scroll-based animations.
       </p>
+
+      <aside class="sidebar__meta">
+        <h2>Profile</h2>
+        <ul>
+          <li><strong>Location:</strong> Barcelona</li>
+          <li><strong>Focus:</strong> Web · Security</li>
+          <li><strong>Email:</strong> <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a></li>
+        </ul>
+      </aside>
+
+      <footer class="sidebar__footer">
+        <p>Scroll to explore <span class="spark">▼</span></p>
+      </footer>
     </section>
 
-    <!-- 右侧主内容 -->
-    <section id="content">
-      <!-- 顶部介绍 + 技能 -->
-      <section id="intro-section">
-        <article id="about-me">
-          <h1>Hi, I'm Pin Quan Lu</h1>
-          <p>
-            I enjoy technology, coding and learning how systems work.
-            In ASIXC we work with networks, operating systems and
-            basic cybersecurity tools. This portfolio is a place to
-            practise HTML, CSS and JavaScript while connecting it to
-            what I study.
+    <!-- 右侧：内容区 -->
+    <section id="content" class="content">
+      <!-- Hero 模块：大标题 + 卡片 3D 跟随鼠标 -->
+      <section id="hero" class="panel hero reveal" data-section>
+        <header class="panel__header">
+          <p class="eyebrow">Portada · Landing</p>
+          <h2>Futuristic web interface demo</h2>
+          <p class="panel__lead">
+            A single page that mixes semantic HTML, sci-fi inspired
+            visuals and JavaScript interactions: dark mode, drag-scrolling
+            and scroll-triggered animations.
           </p>
-          <p id="more-text" class="hidden">
-            The aim of this project is not to build a complex application,
-            but to show that I can structure a website with semantic HTML,
-            style it with responsive CSS and add useful interactions such
-            as a dark mode switch, form validation and dynamic content.
-            These are the same front-end skills that are useful when
-            creating small dashboards or tools for cybersecurity labs.
-          </p>
-          <p>
-            <a href="#" id="toggle-more">Read more</a>
-          </p>
-        </article>
+        </header>
 
-        <aside id="skills">
-          <h3>Skills</h3>
-          <ul>
-            <li>HTML5 &amp; CSS3</li>
-            <li>JavaScript (ES6)</li>
-            <li>Networking basics (TCP/IP)</li>
-            <li>Linux &amp; command line</li>
-            <li>Intro to cybersecurity tools</li>
-          </ul>
-        </aside>
+        <div class="hero__grid">
+          <article class="holo-card" data-tilt data-tilt-depth="1.2">
+            <h3>Semantic layout</h3>
+            <p>
+              The page still respects the assignment requirements:
+              header, footer, section, article and aside are all used.
+            </p>
+          </article>
+
+          <article class="holo-card" data-tilt data-tilt-depth="1.0">
+            <h3>Interactive experience</h3>
+            <p>
+              Mouse-tilt cards, drag-to-scroll project rail and smooth
+              scroll-reveal animations powered by IntersectionObserver.
+            </p>
+          </article>
+
+          <article class="holo-card" data-tilt data-tilt-depth="0.8">
+            <h3>Clean structure</h3>
+            <p>
+              All effects are written in plain JavaScript,
+              so you can easily read, customize and explain them in class.
+            </p>
+          </article>
+        </div>
       </section>
 
-      <!-- 精选项目：跟 project1 / project2 保持同名 -->
-      <section id="featured-projects">
-        <h2>Featured Projects</h2>
+      <!-- Featured projects 模块（作业要求的 2 个项目） -->
+      <section id="featured-projects" class="panel reveal" data-section>
+        <header class="panel__header">
+          <p class="eyebrow">Featured projects</p>
+          <h2>Highlighted work</h2>
+        </header>
 
-        <article class="project-item">
-          <h3>Project 1 – Cyber Lab Task Board</h3>
-          <p>
-            A small front-end prototype that works as a task board for
-            cybersecurity labs: packet capture, firewall rules, password
-            audits and more. It helps to organise activities during
-            practical sessions in ASIXC.
-          </p>
-          <a href="project1.html" class="button">View project »</a>
-        </article>
+        <div class="featured-grid">
+          <article class="project-card" data-tilt data-tilt-depth="1.1">
+            <header>
+              <h3>Project 1 · Online Bookstore</h3>
+              <p class="project-tag">Responsive layout · Cart demo</p>
+            </header>
+            <p>
+              A bookstore landing page with product cards, a simple cart
+              interaction and keyboard-friendly navigation.
+            </p>
+            <footer>
+              <a href="project1.html" class="btn primary">Open details</a>
+            </footer>
+          </article>
 
-        <article class="project-item">
-          <h3>Project 2 – Security Notes Blog</h3>
-          <p>
-            A simple blog-style layout where I can publish study notes
-            about networks, operating systems and basic security topics.
-            It includes a dark mode switch for late-night study sessions.
-          </p>
-          <a href="project2.html" class="button">View project »</a>
-        </article>
+          <article class="project-card" data-tilt data-tilt-depth="1.1">
+            <header>
+              <h3>Project 2 · Weather Forecast UI</h3>
+              <p class="project-tag">Interface · API-ready</p>
+            </header>
+            <p>
+              A weather interface prepared to connect to an API. Focus
+              on clean UI states, cards and typography in both themes.
+            </p>
+            <footer>
+              <a href="project2.html" class="btn primary">Open details</a>
+            </footer>
+          </article>
+        </div>
       </section>
+
+      <!-- 可拖动项目轨道：鼠标左右拖动 -->
+      <section id="project-rail" class="panel reveal" data-section>
+        <header class="panel__header">
+          <p class="eyebrow">Drag interaction</p>
+          <h2>Project timeline rail</h2>
+          <p class="panel__lead">
+            Click and drag horizontally to explore the cards.
+            On touch devices you can swipe.
+          </p>
+        </header>
+
+        <div class="drag-hint">⇠ drag or swipe ⇢</div>
+
+        <div class="rail" data-draggable>
+          <article class="rail-card">
+            <h3>Stage 1 · HTML skeleton</h3>
+            <p>Built the basic structure using section, article and aside.</p>
+          </article>
+          <article class="rail-card">
+            <h3>Stage 2 · Tech styling</h3>
+            <p>Added neon gradients, glowing borders and soft shadows.</p>
+          </article>
+          <article class="rail-card">
+            <h3>Stage 3 · JS interactions</h3>
+            <p>Implemented dark mode, back-to-top, drag-scroll and tilt.</p>
+          </article>
+          <article class="rail-card">
+            <h3>Stage 4 · Fine-tuning</h3>
+            <p>Improved accessibility and kept code easy to explain.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 说明文字 footer（满足 main 中 footer 的要求） -->
+      <footer class="content-footer reveal" data-section>
+        <p>
+          This portada page is fully static: pure HTML, CSS and JavaScript.
+          Perfect for deploying on GitHub Pages and presenting in class.
+        </p>
+        <a href="projects.html" class="link-underline">View all projects page</a>
+      </footer>
     </section>
   </main>
 
-  <footer>
-    <p>
-      &copy; 2025 Pin Quan Lu ·
-      <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a>
-    </p>
+  <!-- 页面底部 footer -->
+  <footer class="page-footer">
+    <p>© 2025 Pin Quan Lu · <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a></p>
   </footer>
 
-  <!-- 回到顶部按钮 -->
-  <button id="back-to-top" title="Back to top">↑ Top</button>
+  <!-- 返回顶部按钮 -->
+  <button id="back-to-top" class="backtop" title="Back to top">↑</button>
 
-  <!-- JS：保持和别的页面一样的路径 -->
   <script src="script.js"></script>
 </body>
 </html>

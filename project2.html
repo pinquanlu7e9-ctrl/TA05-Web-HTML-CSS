@@ -1,89 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Project 2 – Security Notes Blog" />
-  <title>Project 2 – Security Notes Blog</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Project 2 - Weather Forecast UI by Pin Quan Lu." />
+  <title>Project 2 · Weather Forecast UI</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <a href="index.html" class="logo">Pin Quan Lu</a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="#" id="theme-toggle">Dark Mode</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <!-- Sidebar -->
-    <section id="sidebar">
-      <p><strong>Blog for ASIXC studies</strong></p>
-      <p>
-        I use this project as a place to write about topics from the
-        ASIXC (Ciberseguretat) modules: networks, systems, and basic security.
+<header class="topbar">
+  <a href="index.html" class="logo" aria-label="Pin Quan Lu home">
+    <span class="logo__icon" data-tilt data-tilt-depth="1.4">PQL</span>
+    <span class="logo__text">
+      <span class="logo__name">Pin Quan Lu</span>
+      <span class="logo__tag">Cyber Portfolio</span>
+    </span>
+  </a>
+
+  <nav class="topnav" aria-label="Primary navigation">
+    <a class="nav-link" href="index.html">Portada</a>
+    <a class="nav-link" href="project1.html">Project&nbsp;1</a>
+    <a class="nav-link is-active" href="project2.html">Project&nbsp;2</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+  </nav>
+
+  <button id="theme-toggle" class="btn ghost" type="button">Dark mode</button>
+</header>
+
+<main class="layout">
+  <section id="sidebar" class="sidebar reveal" data-tilt data-tilt-depth="0.8">
+    <header class="sidebar__header">
+      <p class="chip">Project 2</p>
+      <h1>Weather Forecast UI</h1>
+    </header>
+
+    <aside>
+      <p class="sidebar__text">
+        A clean interface preview for weather status cards,
+        designed to be API‑ready with light/dark theme support.
+      </p>
+
+      <ul class="sidebar__meta">
+        <li><strong>Year:</strong> 2025</li>
+        <li><strong>Technologies:</strong> HTML, CSS, JavaScript</li>
+        <li><strong>Category:</strong> UI Interface</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section id="content" class="content">
+    <!-- Project intro -->
+    <section class="panel reveal" data-section>
+      <header class="panel__header">
+        <h2>About This Project</h2>
+        <p class="panel__lead">
+          A stylish UI focusing on clarity and weather card design.
+          The layout responds to device width and supports theme modes.
+        </p>
+      </header>
+
+      <div class="featured-grid">
+        <article class="project-card" data-tilt data-tilt-depth="1.1">
+          <h3>Weather Cards</h3>
+          <p>Card UI showing weather with icons and clean text.</p>
+        </article>
+
+        <article class="project-card" data-tilt data-tilt-depth="1.1">
+          <h3>Typography Focus</h3>
+          <p>Careful spacing and hierarchy for readability.</p>
+        </article>
+
+        <article class="project-card" data-tilt data-tilt-depth="1.1">
+          <h3>Theme Ready</h3>
+          <p>Works smoothly in both light and dark modes.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Screenshot placeholder -->
+    <section class="panel reveal" data-section>
+      <h2 class="panel__header">UI Preview</h2>
+      <img
+        src="https://via.placeholder.com/960x400?text=Project+2+Screenshot"
+        alt="Weather Forecast UI Screenshot"
+        class="project-screenshot"
+      />
+      <p class="panel__lead muted">
+        Replace with your actual screenshot.
       </p>
     </section>
 
-    <!-- Content -->
-    <section id="content">
-      <p><a href="projects.html">← Back to all projects</a></p>
+    <footer class="content-footer reveal" data-section>
+      <a class="btn ghost" href="projects.html">&larr; Back to list</a>
+      <a class="btn primary" href="contact.html">Contact me</a>
+    </footer>
+  </section>
+</main>
 
-      <section class="project-details-container">
-        <article>
-          <h1>Project 2 – Security Notes Blog</h1>
-          <p>
-            This project is a simple multi-page blog layout. The idea is to have
-            a clean place where I can publish short articles about what we learn
-            in class: for example how TCP/IP works, how to harden a Linux server,
-            or first steps with security tools.
-          </p>
-          <p>
-            The blog is built with semantic HTML: each post can be an
-            <code>&lt;article&gt;</code>, grouped inside sections. CSS is used to
-            keep the text readable and to make the layout responsive on smaller screens.
-          </p>
-          <p>
-            A dark mode switch is included using JavaScript and
-            <code>localStorage</code>, which makes the blog more comfortable to read
-            during late-night study sessions.
-          </p>
+<footer class="page-footer">
+  <p>© 2025 Pin Quan Lu · <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a></p>
+</footer>
 
-          <img
-            src="https://via.placeholder.com/900x380?text=Security+Notes+Blog+Screenshot"
-            alt="Screenshot of the Security Notes Blog"
-            class="project-screenshot"
-          />
-        </article>
-
-        <aside>
-          <h3>Project info</h3>
-          <ul>
-            <li><strong>Year:</strong> 2025</li>
-            <li><strong>School:</strong> Institut Tecnològic de Barcelona</li>
-            <li><strong>Track:</strong> ASIXC – Ciberseguretat</li>
-            <li><strong>Technologies:</strong> HTML, CSS, JavaScript</li>
-            <li><strong>Type:</strong> Responsive blog layout</li>
-          </ul>
-        </aside>
-      </section>
-    </section>
-  </main>
-
-  <footer>
-    <p>
-      &copy; 2025 Pin Quan Lu ·
-      <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a>
-    </p>
-  </footer>
-
-  <button id="back-to-top" title="Back to top">↑ Top</button>
-  <script src="script.js"></script>
+<button id="back-to-top" class="backtop" title="Back to top">↑</button>
+<script src="script.js"></script>
 </body>
 </html>
