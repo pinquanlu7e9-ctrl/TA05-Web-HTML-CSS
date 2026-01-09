@@ -1,107 +1,220 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="All projects by Pin Quan Lu" />
-  <title>Projects – Pin Quan Lu</title>
-  <!-- 注意：这里用的是 style.css，不是 css/style.css -->
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="All ASIXC projects by Pin Quan Lu" />
+  <title>Projects · Pin Quan Lu</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- Header (same on every page) -->
   <header class="topbar">
-  <a href="index.html" class="logo" aria-label="Pin Quan Lu home">
-    <span class="logo__icon" data-tilt data-tilt-depth="1.4">PQL</span>
-    <span class="logo__text">
-      <span class="logo__name">Pin Quan Lu</span>
-      <span class="logo__tag">Cyber Portfolio</span>
-    </span>
-  </a>
+    <a href="index.html" class="logo" aria-label="Pin Quan Lu home">
+      <span class="logo__icon" data-tilt data-tilt-depth="1.4">PQL</span>
+      <span class="logo__text">
+        <span class="logo__name">Pin Quan Lu</span>
+        <span class="logo__tag">Cyber Portfolio</span>
+      </span>
+    </a>
 
-  <nav class="topnav" aria-label="Primary navigation">
-    <a class="nav-link" href="index.html">Portada</a>
-    <a class="nav-link" href="project1.html">Project 1</a>
-    <a class="nav-link" href="project2.html">Project 2</a>
-    <a class="nav-link is-active" href="projects.html">Projects</a>
-    <a class="nav-link" href="contact.html">Contact</a>
-  </nav>
+    <nav class="topnav" aria-label="Primary navigation">
+      <a class="nav-link" href="index.html">Portada</a>
+      <a class="nav-link" href="project1.html">Project&nbsp;1</a>
+      <a class="nav-link" href="project2.html">Project&nbsp;2</a>
+      <a class="nav-link is-active" href="projects.html" aria-current="page">Projects</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
 
-  <button id="theme-toggle" class="btn ghost" type="button">Dark mode</button>
-</header>
+    <button id="theme-toggle" class="btn ghost" type="button">Dark mode</button>
+  </header>
 
+  <main class="layout">
+    <!-- Sidebar -->
+    <section id="sidebar" class="sidebar reveal" data-tilt data-tilt-depth="0.6">
+      <header class="sidebar__header">
+        <p class="chip">ITB · ASIXC (Ciberseguretat)</p>
+        <h1>Projects</h1>
+      </header>
 
-  <main>
-    <!-- Sidebar (same layout as home) -->
-    <section id="sidebar">
-      <p><strong>ASIXC student – Cybersecurity</strong></p>
-      <p>
-        I study at Institut Tecnològic de Barcelona (ITB), in the ASIXC (Ciberseguretat)
-        programme. Most of my projects are related to networking and security.
+      <p class="sidebar__text">
+        A curated list of project ideas and exercises related to system administration,
+        networking and cybersecurity (ASIXC track). Only Project 1 and Project 2 have
+        full detail pages — the rest are listed as concepts.
       </p>
+
+      <aside class="sidebar__meta">
+        <h2>Focus areas</h2>
+        <ul>
+          <li><strong>Systems:</strong> Linux / Windows Server</li>
+          <li><strong>Networking:</strong> Routing / VLAN / VPN</li>
+          <li><strong>Security:</strong> Hardening / SOC / Forensics</li>
+        </ul>
+      </aside>
+
+      <footer class="sidebar__footer">
+        <p>Tip: Think of this as a study roadmap <span class="spark">✦</span></p>
+      </footer>
     </section>
 
-    <!-- Main content -->
-    <section id="content">
-      <h1>All Projects</h1>
-      <p>
-        This page lists some of the exercises and small projects I have built during
-        my studies at <strong>Institut Tecnològic de Barcelona</strong> in the
-        <strong>ASIXC (Ciberseguretat)</strong> track.
-      </p>
-
-      <section id="projects-list">
-        <!-- Project 1 -->
-        <article class="project-item">
-          <h2>Project 1 – Cyber Lab Task Board</h2>
-          <p>
-            A simple web task board to organise cybersecurity lab exercises:
-            packet capture, firewall rules, password audits, etc.
+    <!-- Content -->
+    <section id="content" class="content">
+      <section class="panel reveal" data-section>
+        <header class="panel__header">
+          <p class="eyebrow">ASIXC portfolio</p>
+          <h2>All projects (20)</h2>
+          <p class="panel__lead">
+            Project 1 and 2 are implemented. The rest are ASIXC-related concepts with short descriptions.
           </p>
-          <a href="project1.html" class="button">View details »</a>
-        </article>
+        </header>
 
-        <!-- Project 2 -->
-        <article class="project-item">
-          <h2>Project 2 – Security Notes Blog</h2>
-          <p>
-            A personal blog-style website to publish study notes about
-            networking, operating systems, and basic security concepts.
-          </p>
-          <a href="project2.html" class="button">View details »</a>
-        </article>
+        <div class="projects-grid">
+          <!-- Implemented (links) -->
+          <article class="project-card project-card--list" data-tilt data-tilt-depth="1.0">
+            <header>
+              <h3>01 · Online Bookstore UI</h3>
+              <p class="project-tag">Implemented · Responsive layout · JS demo</p>
+            </header>
+            <p>Interactive UI with cards, hover/tilt and a simple cart simulation (localStorage).</p>
+            <footer>
+              <a href="project1.html" class="btn primary">Open details</a>
+            </footer>
+          </article>
 
-        <!-- Project 3 -->
-        <article class="project-item">
-          <h2>Project 3 – Network Map (concept)</h2>
-          <p>
-            Concept for a web page that visually shows a small ITB lab network:
-            routers, switches, servers and clients, with a short description of each.
-            (This version does not have a detail page yet.)
-          </p>
-        </article>
+          <article class="project-card project-card--list" data-tilt data-tilt-depth="1.0">
+            <header>
+              <h3>02 · Weather Forecast UI</h3>
+              <p class="project-tag">Implemented · UI states · Theme-ready</p>
+            </header>
+            <p>Weather card interface prepared for API integration, with clean typography and layout.</p>
+            <footer>
+              <a href="project2.html" class="btn primary">Open details</a>
+            </footer>
+          </article>
 
-        <!-- Project 4 -->
-        <article class="project-item">
-          <h2>Project 4 – Log Monitoring Dashboard (concept)</h2>
-          <p>
-            Concept for a dashboard layout to display system logs and alerts,
-            useful when learning about intrusion detection and log analysis.
-            (This version also has no separate detail page yet.)
-          </p>
-        </article>
+          <!-- Concepts -->
+          <article class="project-card project-card--list">
+            <header><h3>03 · Linux Hardening Checklist</h3><p class="project-tag">Concept · Security baseline</p></header>
+            <p>SSH, firewall, users/groups, sudo policy, auditd, updates and logging checklist.</p>
+            <footer><span class="chip">Concept</span></footer>
+          </article>
+
+          <article class="project-card project-card--list">
+            <header><h3>04 · Windows Server AD Lab</h3><p class="project-tag">Concept · Active Directory</p></header>
+            <p>Domain setup, OU structure, GPO rules, password policies and least privilege.</p>
+            <footer><span class="chip">Concept</span></footer>
+          </article>
+
+          <article class="project-card project-card--list">
+            <header><h3>05 · VLAN Segmentation Plan</h3><p class="project-tag">Concept · Networking</p></header>
+            <p>Small campus lab design using VLANs, trunking, inter-VLAN routing and ACLs.</p>
+            <footer><span class="chip">Concept</span></footer>
+          </article>
+
+          <article class="project-card project-card--list">
+            <header><h3>06 · pfSense Firewall Ruleset</h3><p class="project-tag">Concept · Firewall</p></header>
+            <p>WAN/LAN rules, NAT, port forwards, logging strategy and test scenarios.</p>
+            <footer><span class="chip">Concept</span></footer>
+          </article>
+
+          <article class="project-card project-card--list">
+            <header><h3>07 · VPN Deployment (WireGuard)</h3><p class="project-tag">Concept · Remote access</p></header>
+            <p>WireGuard server + clients, key management, split tunneling and hardening notes.</p>
+            <footer><span class="chip">Concept</span></footer>
+          </article>
+
+          <article class="project-card project-card--list">
+            <header><h3>08 · Backup Strategy (3-2-1)</h3><p class="project-tag">Concept · Sysadmin</p></header>
+            <p>Local + offsite backups, encryption, retention policy and restore drills.</p>
+            <footer><span class="chip">Concept</span></footer>
+          </article>
+
+          <article class="project-card project-card--list">
+            <header><h3>09 · Docker Secure Deployment</h3><p class="project-tag">Concept · Containers</p></header>
+            <p>Least privilege containers, scanning, secrets, network isolation and safe templates.</p>
+            <footer><span class="chip">Concept</span></footer>
+          </article>
+
+          <article class="project-card project-card--list">
+            <header><h3>10 · SIEM Mini-Lab</h3><p class="project-tag">Concept · SOC basics</p></header>
+            <p>Centralize logs, basic correlation rules, alerts and a small dashboard (learning project).</p>
+            <footer><span class="chip">Concept</span></footer>
+          </article>
+
+          <article class="project-card project-card--list">
+            <header><h3>11 · Incident Response Playbook</h3><p class="project-tag">Concept · Procedures</p></header>
+            <p>Triage, containment, eradication, recovery and reporting template.</p>
+            <footer><span class="chip">Concept</span></footer>
+          </article>
+
+          <article class="project-card project-card--list">
+            <header><h3>12 · Nmap Enumeration Notes</h3><p class="project-tag">Concept · Recon</p></header>
+            <p>Scanning profiles, safe methodology, service detection and reporting format.</p>
+            <footer><span class="chip">Concept</span></footer>
+          </article>
+
+          <article class="project-card project-card--list">
+            <header><h3>13 · Wireshark Traffic Analysis Cases</h3><p class="project-tag">Concept · Packet capture</p></header>
+            <p>DNS/HTTP/ARP patterns, suspicious behavior detection and documentation.</p>
+            <footer><span class="chip">Concept</span></footer>
+          </article>
+
+          <article class="project-card project-card--list">
+            <header><h3>14 · IAM & Password Policy Review</h3><p class="project-tag">Concept · Identity</p></header>
+            <p>Policy checklist, auditing steps and secure recommendations for users/admins.</p>
+            <footer><span class="chip">Concept</span></footer>
+          </article>
+
+          <article class="project-card project-card--list">
+            <header><h3>15 · Web Server Hardening (Nginx/Apache)</h3><p class="project-tag">Concept · Web infra</p></header>
+            <p>TLS configuration, security headers, permissions and log review routine.</p>
+            <footer><span class="chip">Concept</span></footer>
+          </article>
+
+          <article class="project-card project-card--list">
+            <header><h3>16 · Monitoring Dashboard (Prometheus)</h3><p class="project-tag">Concept · Observability</p></header>
+            <p>Node metrics, service checks, alert rules and basic visualization.</p>
+            <footer><span class="chip">Concept</span></footer>
+          </article>
+
+          <article class="project-card project-card--list">
+            <header><h3>17 · DNS & DHCP Lab</h3><p class="project-tag">Concept · Network services</p></header>
+            <p>Reliable name resolution + address management for a small lab network.</p>
+            <footer><span class="chip">Concept</span></footer>
+          </article>
+
+          <article class="project-card project-card--list">
+            <header><h3>18 · File Integrity Monitoring (FIM)</h3><p class="project-tag">Concept · Detection</p></header>
+            <p>Track critical file changes, baseline hashes and alerting strategy.</p>
+            <footer><span class="chip">Concept</span></footer>
+          </article>
+
+          <article class="project-card project-card--list">
+            <header><h3>19 · Forensics Collection Checklist</h3><p class="project-tag">Concept · Forensics</p></header>
+            <p>Logs, memory, disk images, hashes and chain-of-custody notes template.</p>
+            <footer><span class="chip">Concept</span></footer>
+          </article>
+
+          <article class="project-card project-card--list">
+            <header><h3>20 · Asset Inventory + Network Diagram</h3><p class="project-tag">Concept · Documentation</p></header>
+            <p>Inventory template: devices, IPs, owners, risk level, patch status and notes.</p>
+            <footer><span class="chip">Concept</span></footer>
+          </article>
+        </div>
       </section>
+
+      <footer class="content-footer reveal" data-section>
+        <a class="btn ghost" href="index.html">&larr; Back to Portada</a>
+        <a class="btn primary" href="contact.html">Contact me</a>
+      </footer>
     </section>
   </main>
 
-  <footer>
-    <p>
-      &copy; 2025 Pin Quan Lu ·
-      <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a>
-    </p>
+  <footer class="page-footer">
+    <p>© 2025 Pin Quan Lu · <a href="mailto:pinquan.lu.7e9@itb.cat">pinquan.lu.7e9@itb.cat</a></p>
   </footer>
 
-  <button id="back-to-top" title="Back to top">↑ Top</button>
+  <button id="back-to-top" class="backtop" title="Back to top">↑</button>
   <script src="script.js"></script>
 </body>
 </html>

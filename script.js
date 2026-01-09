@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ========== 6. Drag-to-scroll rail ========== */
+  /* ========== 6. Drag-to-scroll rail (kept, harmless if no rail exists) ========== */
   const rail = document.querySelector("[data-draggable]");
   if (rail) {
     let isDown = false;
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const moveDrag = (pageX) => {
       if (!isDown) return;
       const x = pageX - rail.offsetLeft;
-      const walk = (x - startX) * 1.1; // scroll speed
+      const walk = (x - startX) * 1.1;
       rail.scrollLeft = scrollLeft - walk;
     };
 
@@ -159,13 +159,11 @@ document.addEventListener("DOMContentLoaded", () => {
       rail.classList.remove("is-dragging");
     };
 
-    // Mouse
     rail.addEventListener("mousedown", (e) => startDrag(e.pageX));
     rail.addEventListener("mousemove", (e) => moveDrag(e.pageX));
     rail.addEventListener("mouseleave", stopDrag);
     rail.addEventListener("mouseup", stopDrag);
 
-    // Touch
     rail.addEventListener("touchstart", (e) => {
       const t = e.touches[0];
       if (!t) return;
@@ -199,7 +197,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     revealEls.forEach((el) => observer.observe(el));
   } else {
-    // 如果浏览器不支持，直接显示
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 });
